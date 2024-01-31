@@ -26,5 +26,8 @@
             <span class="block text-sm text-gray-500">failures</span>
         </dd>
     </dl>
+    <div class="inline-flex justify-center items-center">
+        <span class="text-xs text-gray-600">[DATE]</span>
+    </div>
 </div>
 <!-- End Card -->

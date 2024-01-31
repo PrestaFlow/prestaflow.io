@@ -41,6 +41,7 @@ foreach ($versions as $version) {
         $failures = $json['stats']['failures'];
         $passes_color = $json['stats']['failures'] > 0 ? 'gray' : 'green';
         $failures_color = $json['stats']['failures'] > 0 ? 'red' : 'gray';
+        $date = date('M j, Y - h:i A', strtotime($json['stats']['end']));
     } else {
         $color = 'gray';
         $result = 'To determinate';
@@ -48,6 +49,7 @@ foreach ($versions as $version) {
         $failures = '-';
         $passes_color = 'gray';
         $failures_color = 'gray';
+        $date = '';
     }
 
     $card = str_replace('[VERSION]', $version, $card);
@@ -57,6 +59,7 @@ foreach ($versions as $version) {
     $card = str_replace('[FAILURES]', $failures, $card);
     $card = str_replace('[PASSES_COLOR]', $passes_color, $card);
     $card = str_replace('[FAILURES_COLOR]', $failures_color, $card);
+    $card = str_replace('[DATE]', $date, $card);
 
     $generated['cards'] .= $card;
 }
