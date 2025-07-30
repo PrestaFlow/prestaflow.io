@@ -69,6 +69,5 @@ jobs:
             composer install --no-dev --optimize-autoloader
             php artisan migrate --force
             php artisan optimize
-            npm ci 
-            npm run build
-            sudo supervisorctl restart laravel-worker:*
+            /opt/alt/alt-nodejs22/root/usr/bin/npm ci 
+            /opt/alt/alt-nodejs22/root/usr/bin/npm run build
