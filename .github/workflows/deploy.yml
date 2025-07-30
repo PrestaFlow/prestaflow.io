@@ -69,5 +69,5 @@ jobs:
             composer install --no-dev --optimize-autoloader
             php artisan migrate --force
             php artisan optimize
-          # /opt/alt/alt-nodejs22/root/usr/bin/npm ci
-          # /opt/alt/alt-nodejs22/root/usr/bin/npm run build
+            npm ci
+            npm run build
