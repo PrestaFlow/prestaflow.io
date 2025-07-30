@@ -18,7 +18,7 @@ Route::get('/{locale}/', function (string $locale) {
 
     App::setLocale($locale);
     return view('welcome.'.$locale);
-})->name('welcome.locale');
+})->whereIn('locale', ['en', 'fr'])->name('welcome.locale');
 
 Route::redirect('/docs/{version}/{page?}', '/docs/library/{version}/{page?}')
     ->where('page', '(.*)')
