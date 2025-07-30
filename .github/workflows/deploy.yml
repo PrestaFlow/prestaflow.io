@@ -64,7 +64,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.SSH_KEY_PASSWORD }}
           script: |
-            cd /prestaflow.io
+            cd prestaflow.io
             git pull origin main
             composer install --no-dev --optimize-autoloader
             php artisan migrate --force
