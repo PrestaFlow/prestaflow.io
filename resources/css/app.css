@@ -1,0 +1,259 @@
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
+@plugin '@tailwindcss/forms';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../../vendor/filament/**/*.blade.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-mirage: #141624;
+    --color-haiti: #16182c;
+    --color-cloud: #2b2e53;
+
+    --font-poppins: 'Poppins', Verdana, sans-serif;
+}
+
+@utility container {
+    margin-inline: auto;
+}
+
+@layer base {
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentcolor);
+    }
+}
+
+@layer base {
+    html {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: 200% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Prevents scrollbars from appearing when a popover is open */
+html:has(#mobile-menu-popover:popover-open) {
+    overflow: hidden;
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* Scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+}
+
+/* Light Theme */
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-300/80;
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-300;
+}
+
+/* Dark Theme */
+.dark ::-webkit-scrollbar-thumb {
+    @apply bg-cloud/60;
+}
+
+/* Scrollbar thumb on hover */
+.dark ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cloud;
+}
+
+/* Whole menu */
+nav.docs-navigation ul {
+    @apply list-none text-sm;
+}
+
+/* Categories */
+nav.docs-navigation > ul > li {
+    @apply mb-3;
+
+    & > a {
+        @apply font-semibold;
+        @apply mb-1.5 px-3 py-2.5 no-underline;
+        @apply rounded-xl border dark:border-white/15;
+    }
+}
+
+nav.docs-navigation > ul > li.active > a {
+    @apply text-black dark:text-white;
+
+    & > svg {
+        @apply text-violet-400;
+    }
+}
+
+nav.docs-navigation > ul > li > a {
+    @apply transition duration-200 will-change-transform;
+}
+
+nav.docs-navigation > ul > li:hover > a {
+    @apply translate-x-0.5 bg-gray-50 dark:bg-gray-900/50;
+}
+
+/* Sub menus */
+nav.docs-navigation > ul > li > ul {
+    & > li {
+        @apply font-normal;
+
+        & a {
+            @apply ml-3 block w-full border-l-[1.5px] py-1.5 pl-3 transition-all duration-200 dark:border-white/10;
+        }
+
+        &.exact-active a {
+            @apply border-violet-400 font-medium text-violet-800/80 dark:border-violet-400/90 dark:text-white;
+        }
+
+        &:hover a {
+            @apply border-violet-400 dark:border-violet-400/90;
+        }
+    }
+}
+
+/* Prose */
+.prose h1 {
+    @apply text-2xl;
+}
+
+.prose h2 {
+    @apply text-xl;
+}
+
+.prose h3 {
+    @apply text-lg;
+}
+
+.prose h4 {
+    @apply text-base;
+}
+
+.prose pre {
+    @apply rounded-xl p-6 shadow-lg;
+}
+
+.prose pre code {
+    @apply text-gray-50;
+}
+
+.prose code {
+    @apply px-1;
+}
+
+.prose a {
+    @apply text-indigo-700 dark:text-indigo-300;
+}
+
+.prose a:hover {
+    @apply text-indigo-600 no-underline dark:text-indigo-300;
+}
+
+.prose img {
+    @apply rounded-xl shadow-md;
+}
+
+.prose img.no-format {
+    @apply rounded-none shadow-none;
+}
+
+/*
+ Margin and rounding are personal preferences,
+ overflow-x-auto is recommended.
+*/
+.prose pre {
+    @apply my-4 overflow-x-auto rounded-md bg-transparent p-0;
+}
+
+/*
+ Add some vertical padding and expand the width
+ to fill its container. The horizontal padding
+ comes at the line level so that background
+ colors extend edge to edge.
+*/
+.prose pre code.torchlight {
+    @apply block min-w-max py-4;
+}
+
+/*
+ Horizontal line padding.
+*/
+.prose pre code.torchlight .line {
+    @apply px-4;
+}
+
+/*
+ Push the code away from the line numbers and
+ summary caret indicators.
+*/
+.prose pre code.torchlight .line-number,
+.prose pre code.torchlight .summary-caret {
+    @apply mr-4;
+}
+
+/*
+ Prose dark mode
+*/
+.dark .prose strong {
+    @apply text-gray-300;
+}
+
+.dark .prose blockquote {
+    @apply text-gray-300;
+}
+
+.dark .prose code {
+    @apply text-gray-300;
+}
