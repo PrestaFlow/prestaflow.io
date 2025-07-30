@@ -8,21 +8,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.4'
           extensions: mbstring, xml, ctype, iconv, intl, pdo_mysql, bcmath, redis
-          
+
       - name: Install Composer dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22'
-          
+
       - name: Install NPM dependencies and build assets
         run: |
           npm ci
@@ -37,7 +37,7 @@ jobs:
         shell: bash
         run: |
           ENDPOINT='frontend/o2switch/o2switch-ssh-whitelist/index.live.php'
-      
+
           echo "Get actual whitelisted IPs..."
           UNIQUE_IPS=$(curl -sX GET "https://${{ secrets.USERNAME }}:${{ secrets.URL_ENCODED_PASSWORD }}@${{ secrets.HOST }}:2083/$ENDPOINT?r=list" | jq -r '.data.list[] | .address' | sort -u)
           for address in $UNIQUE_IPS; do
@@ -52,10 +52,10 @@ jobs:
             sleep 3
           done
           echo "All non-whitelisted IPs deleted!"
-      
+
           echo "Attempt to whitelist IP..."
           curl -sX POST -d 'whitelist[address]=${{ steps.ip.outputs.ipv4 }}' -d 'whitelist[port]=22' "https://${{ secrets.USERNAME }}:${{ secrets.URL_ENCODED_PASSWORD }}@${{ secrets.HOST }}:2083/$ENDPOINT?r=add" | jq
-        
+
       - name: Deploy to production server
         uses: appleboy/ssh-action@master
         with:
@@ -69,5 +69,5 @@ jobs:
             composer install --no-dev --optimize-autoloader
             php artisan migrate --force
             php artisan optimize
-            /opt/alt/alt-nodejs22/root/usr/bin/npm ci 
-            /opt/alt/alt-nodejs22/root/usr/bin/npm run build
+          # /opt/alt/alt-nodejs22/root/usr/bin/npm ci
+          # /opt/alt/alt-nodejs22/root/usr/bin/npm run build
