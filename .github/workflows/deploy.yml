@@ -16,7 +16,7 @@ jobs:
           extensions: mbstring, xml, ctype, iconv, intl, pdo_mysql, bcmath, redis
           
       - name: Install Composer dependencies
-        run: composer install --no-dev --optimize-autoloader
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
         
       - name: Setup Node.js
         uses: actions/setup-node@v3
