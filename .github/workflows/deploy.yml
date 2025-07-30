@@ -30,6 +30,25 @@ jobs:
           
       - name: Run tests
         run: php artisan test
+
+      # Get the public IP of the runner
+      - name: Public IP
+        id: ip
+        uses: haythem/public-ip@v1.3
+
+        # Whitelist the public IP of the runner on the remote server by adding it to the SSH whitelist and wait 65 seconds for the IP to be whitelisted
+      - shell: bash
+        run: |
+          curl -sX GET 'https://${{ secrets.USERNAME }}:${{ secrets.URL_ENCODED_PASSWORD }}@${{ secrets.HOST }}:2083/frontend/o2switch/o2switch-ssh-whitelist/index.live.php' | fgrep 'index.live.php' | fgrep 'index.live.php?r=remove&address=' | cut -d '"' -f 2 | while read ipToRemove
+          do 
+            curl -sX GET 'https://${{ secrets.USERNAME }}:${{ secrets.URL_ENCODED_PASSWORD }}@${{ secrets.HOST }}:2083/frontend/o2switch/o2switch-ssh-whitelist/'$ipToRemove > /dev/null 2>&1
+          done
+          curl -X POST \
+            -d 'whitelist[address]=${{ steps.ip.outputs.ipv4 }}' \
+            -d 'whitelist[port]=22' \
+            'https://${{ secrets.USERNAME }}:${{ secrets.URL_ENCODED_PASSWORD }}@${{ secrets.HOST }}:2083/frontend/o2switch/o2switch-ssh-whitelist/index.live.php?r=add'  > /dev/null 2>&1
+          curl -sX GET 'https://${{ secrets.USERNAME }}:${{ secrets.URL_ENCODED_PASSWORD }}@${{ secrets.HOST }}:2083/frontend/o2switch/o2switch-ssh-whitelist/index.live.php' | fgrep -q '${{ steps.ip.outputs.ipv4 }}' && echo "IP whitelisted"
+          sleep 65
         
       - name: Deploy to production server
         uses: appleboy/ssh-action@master
