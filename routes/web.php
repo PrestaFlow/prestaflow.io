@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 Route::get('/', function () {
     return view('welcome.en');
 });
-Route::get('/{locale}', function (string $locale) {
+Route::get('/{locale}/', function (string $locale) {
     if (! in_array($locale, ['en', 'fr'])) {
         $locale = 'en';
     }
