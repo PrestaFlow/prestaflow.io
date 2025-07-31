@@ -114,7 +114,7 @@ Livewire.start()
 // Docsearch
 docsearch({
     appId: '24EMU7HBP5',
-    apiKey: '3075f6a8d9703645db89e51acc8a90dc',
+    apiKey: '2361b63c2e75b67f626417dd39a88550',
     indexName: 'prestaflow',
     insights: true,
     container: '#docsearch',
