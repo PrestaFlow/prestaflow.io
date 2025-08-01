@@ -11,6 +11,7 @@ import docsearch from '@docsearch/js'
 import Atropos from 'atropos'
 import '@docsearch/css'
 import 'atropos/css'
+import 'preline'
 
 import.meta.glob(['../images/**', '../svg/**'])
 import {
