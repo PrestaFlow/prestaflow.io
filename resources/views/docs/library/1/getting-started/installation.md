@@ -6,8 +6,9 @@ order: 100
 ## Requirements
 
 1. PHP 8.2+
-2. PrestaShop 8+
-3. *It's all !*
+2. PHP Gd extension
+3. PrestaShop 8+
+4. *It's all !*
 
 ## PrestaShop version
 
