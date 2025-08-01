@@ -17,40 +17,46 @@ Expect::that(<something)
 There, you expect that something will be something.
 
 ### Generic
-#### contains
-#### notContains
 
-#### startsWith
-#### endsWith
-
-#### isTheSameAs
-#### samePriceAs
-#### equals
-
-#### isNull
-#### isNotNull
-#### isEmpty
-#### isNotEmpty
-
-#### isBetween
-#### isGreaterThan
-#### isLessThan
-#### isGreaterThanOrEqualTo
-#### isLessThanOrEqualTo
+| Expect                    |
+|---------------------------|
+| contains                  |
+| notContains               |
+| startsWith                |
+| endsWith                  |
+| isTheSameAs               |
+| samePriceAs               |
+| equals                    |
+| isNull                    |
+| isNotNull                 |
+| isNotEmpty                |
+| isBetween                 |
+| isGreaterThan             |
+| isLessThan                |
+| isGreaterThanOrEqualTo    |
+| isLessThanOrEqualTo       |
 
 ### Elements
-#### elementIsVisible
-#### elementIsNotVisible
+
+| Expect                    |
+|---------------------------|
+| elementIsVisible          |
+| elementIsNotVisible       |
 
 ### Shop
-#### shopIsInMaintenance
-#### shopIsInMaintenance
-#### shopIsVisible
-#### shopIsNotVisible
+| Expect                    |
+|---------------------------|
+| shopIsInMaintenance       |
+| shopIsNotInMaintenance    |
+| shopIsVisible             |
+| shopIsNotVisible          |
 
 ### Customer
-#### customerIsLogged
-#### customerIsNotLogged
+
+| Expect                    |
+|---------------------------|
+| customerIsLogged          |
+| customerIsNotLogged       |
 
 ## Example
 

@@ -4,14 +4,24 @@ order: 700
 ---
 
 ### Page
-#### getPageTitle
-#### getTextContent
-#### goToUrl
-#### navigateTo
+
+| Action            |
+|-------------------|
+| getPageTitle      |
+| getTextContent    |
+| goToUrl           |
+| navigateTo        |
 
 ### Inputs
-#### getInputValue
-#### setValue
+
+| Action            |
+|-------------------|
+| getInputValue     |
+| setValue          |
+
 
 ### Mouse
-#### click
+
+| Action            |
+|-------------------|
+| click             |
