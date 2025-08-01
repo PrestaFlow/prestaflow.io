@@ -21,7 +21,7 @@ We'll add two namespaces to our composer.json file:
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "Tests/"
         }
     },
 ```
