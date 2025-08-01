@@ -5,7 +5,7 @@ order: 100
 
 ## Requirements
 
-1. PHP 8.1+
+1. PHP 8.2+
 2. PrestaShop 8+
 3. *It's all !*
 
