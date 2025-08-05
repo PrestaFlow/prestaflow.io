@@ -43,3 +43,9 @@ composer run prestaflow:tests
 As now, if you doesn't have a Tests folder, you will have an error ouput.
 
 If you have a Tests folder but withtout PrestaFlow's suites, it will show a success message.
+
+Also, you can get the JSON output if wanted.
+
+```shell
+composer run prestaflow:tests:json
+```
