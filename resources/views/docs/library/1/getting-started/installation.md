@@ -27,7 +27,7 @@ Into your composer.json, add theses scripts :
 ``` json
 "scripts": {
     "prestaflow:base": "./vendor/prestaflow/php-library/bin/prestaflow run",
-    "prestaflow:tests": "@prestaflow:base ./Tests",
+    "prestaflow:tests": "@prestaflow:base ./Tests @additional_args",
     "prestaflow:tests:json": "./vendor/prestaflow/php-library/bin/prestaflow run --output=JSON ./Tests"
 },
 ```
