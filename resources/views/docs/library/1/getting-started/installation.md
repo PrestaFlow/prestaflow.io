@@ -44,6 +44,15 @@ As now, if you doesn't have a Tests folder, you will have an error ouput.
 
 If you have a Tests folder but withtout PrestaFlow's suites, it will show a success message.
 
+### JSON output
+
+<aside class="relative z-0 mt-5 overflow-hidden rounded-2xl bg-yellow-50 px-5 ring-1 ring-black/5 dark:bg-yellow-600/40">
+
+Not working on __1.0.0__ version.
+Working on it for next minor version.
+
+</aside>
+
 Also, you can get the JSON output if wanted.
 
 ```shell
