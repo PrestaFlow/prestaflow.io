@@ -57,9 +57,9 @@ You can be part of this project by contributing to it, through issues, pull requ
 These people supported the project during its initial development. A big thank you to them!
 
 - [Jonathan Danse](https://github.com/PrestaEdit)
-- [seynaeve](https://github.com/seynaeve)
+- [Edouard Seynaeve](https://github.com/seynaeve)
 - [Jean-François Viguier](https://github.com/jf-viguier)
-- [PascalNetenvie](https://github.com/PascalNetenvie)
+- [Pascal Devif](https://github.com/PascalNetenvie)
 - [Morgan](https://github.com/momodemo333)
 
 <aside class="relative z-0 mt-5 overflow-hidden rounded-2xl bg-blue-50 px-5 ring-1 ring-black/5 dark:bg-blue-600/10">
