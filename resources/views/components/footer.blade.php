@@ -123,7 +123,12 @@
                         class="absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-current transition duration-300 ease-out will-change-transform group-hover:origin-left group-hover:scale-x-100"
                     ></div>
                 </a>
-                <div>design by</div>
+            </div>
+            <div
+                class="hidden h-3 w-0.5 bg-gray-300 md:block dark:bg-[#242734]"
+            ></div>
+            <div class="flex gap-1">
+                <div>Design by</div>
                 <a
                     href="https://zahirnia.com"
                     target="_blank"

@@ -237,7 +237,7 @@
                 ></div>
 
                 {{-- Sponsor Link --}}
-                {--
+                {{--
                 <div class="gsap-mobile-menu-link w-full">
                     <a
                         href="/sponsor"
