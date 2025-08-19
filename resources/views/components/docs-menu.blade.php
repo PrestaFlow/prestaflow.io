@@ -45,7 +45,7 @@
         </button>
 
         {{-- Platform switcher --}}
-        <x-mini-platform-switcher />
+        {{-- <x-mini-platform-switcher /> --}}
     </div>
 
     {{-- Docs mobile menu --}}
