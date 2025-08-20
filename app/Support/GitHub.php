@@ -3,6 +3,7 @@
 namespace App\Support;
 
 use App\Support\GitHub\Release;
+use Exception;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
@@ -49,11 +50,15 @@ class GitHub
 
     private function fetchLatestVersion(): ?Release
     {
-        // Make a request to GitHub
-        $response = Http::get('https://api.github.com/repos/'.$this->package.'/releases/latest');
+        try {
+            // Make a request to GitHub
+            $response = Http::get('https://api.github.com/repos/'.$this->package.'/releases/latest');
 
-        // Check if the request was successful
-        if ($response->failed()) {
+            // Check if the request was successful
+            if ($response->failed()) {
+                return null;
+            }
+        } catch (Exception $e) {
             return null;
         }
 
@@ -67,11 +72,15 @@ class GitHub
 
     private function fetchReleases(): ?Collection
     {
-        // Make a request to GitHub
-        $response = Http::get('https://api.github.com/repos/'.$this->package.'/releases');
+        try {
+            // Make a request to GitHub
+            $response = Http::get('https://api.github.com/repos/'.$this->package.'/releases');
 
-        // Check if the request was successful
-        if ($response->failed()) {
+            // Check if the request was successful
+            if ($response->failed()) {
+                return collect();
+            }
+        } catch (Exception $e) {
             return collect();
         }
 
