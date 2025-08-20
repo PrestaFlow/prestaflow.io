@@ -72,8 +72,16 @@ composer run prestaflow:tests:json
 </div>
 <!-- / Since -->
 
+```php
+public $draft = true;
+```
+
 ```shell
 composer run prestaflow:tests:json -- --draft
+```
+
+```php
+public $draft = false;
 ```
 
 ```shell
@@ -92,6 +100,14 @@ composer run prestaflow:tests:json -- --no-draft
   </div>
 </div>
 <!-- / Since -->
+
+```php
+public $groups = 'tutorial';
+```
+
+```php
+public $groups = ['scenarions', 'en'];
+```
 
 ```shell
 composer run prestaflow:base -- --group=tutorial --group=other-group
