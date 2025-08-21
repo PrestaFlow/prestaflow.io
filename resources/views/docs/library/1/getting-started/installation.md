@@ -7,7 +7,7 @@ order: 100
 
 1. PHP 8.2+
 2. PHP Gd extension
-3. PrestaShop 8+
+3. PrestaShop 1.7, 8 or 9
 4. *It's all !*
 
 ## PrestaShop version
