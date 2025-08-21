@@ -64,7 +64,5 @@ jobs:
 ```
 
 <aside class="relative z-0 mt-5 overflow-hidden rounded-2xl bg-blue-50 px-5 ring-1 ring-black/5 dark:bg-blue-600/10">
-
-    🚀 You can see more examples on this [workflow file](https://github.com/PrestaEdit/prestaflow-prestashop/actions/runs/17120347275).
-
+🚀 You can see more examples on this [workflow file](https://github.com/PrestaEdit/prestaflow-prestashop/actions/runs/17120347275).
 </aside>
