@@ -12,7 +12,7 @@ order: 100
 
 ## PrestaShop version
 
-Currently, only PrestaShop versions 8 and 9 are supported by the library.
+PrestaShop versions 1.7, 8 and 9 are supported by the library.
 
 ## Install the library
 
