@@ -3,7 +3,11 @@ title: Configuration
 order: 200
 ---
 
-In order to configure your project and tell PrestaFlow the necessary data, you need to add the following elements to your .env file.
+In order to configure your project and tell <span class="bg-clip-text bg-gradient-to-tl from-blue-400 to-teal-600 font-semibold text-transparent">PrestaFlow</span> the necessary data, you need to add the following elements to your .env file.
+
+`PRESTAFLOW_FO_URL` is the only required configuration.
+
+Adding the `PRESTAFLOW_PS_VERSION` and `PRESTAFLOW_LOCALE` configurations is strongly recommended.
 
 ## .env
 
@@ -26,7 +30,7 @@ In order to configure your project and tell PrestaFlow the necessary data, you n
 
 Useful when your store is in multiple languages.
 
-Allows PrestaFlow to add the language prefix to the desired URLs.
+Allows <span class="bg-clip-text bg-gradient-to-tl from-blue-400 to-teal-600 font-semibold text-transparent">PrestaFlow</span> to add the language prefix to the desired URLs.
 
 ### PRESTAFLOW_HEADLESS
 

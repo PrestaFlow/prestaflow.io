@@ -41,7 +41,7 @@ $dataset = [
 
 ## Use inside a step
 
-To use a element of the dataset, you will use the getParam() method.
+To use a element of the dataset, you will use the `getParam()` method.
 
 ```php
 ->it('should check product price', function () use ($frontOfficeProductPage) {

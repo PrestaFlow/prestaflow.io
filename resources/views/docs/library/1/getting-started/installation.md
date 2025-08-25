@@ -8,7 +8,7 @@ order: 100
 1. PHP 8.2+
 2. PHP Gd extension
 3. PrestaShop 1.7, 8 or 9
-4. *It's all !*
+4. *It's all !* ✨
 
 ## PrestaShop version
 
@@ -31,8 +31,6 @@ Into your composer.json, add theses scripts :
 },
 ```
 
-You are free to modify the "tests" script to use another folder if necessary.
-
 ## Run
 
 ```shell
@@ -40,9 +38,9 @@ composer prestaflow:default
 composer prestaflow:default -- --output="compact"
 ```
 
-As now, if you doesn't have a Tests folder, you will have an error ouput.
+As now, if you doesn't have a <Tests> folder, you will have an error ouput.
 
-If you have a Tests folder but without PrestaFlow's suites, it will show a success message.
+If you have a <Tests> folder but without PrestaFlow's suites, it will show a success message.
 
 You can also specify a different folder if needed.
 
@@ -73,19 +71,18 @@ composer prestaflow:default -- --output="json"
 </div>
 <!-- / Since -->
 
+Tests can be written at each key stage of a project.
+
+To allow you to implement these without making the output cumbersome, you can define a test as a draft.
+
+This gives you the option to test only drafts or, conversely, ignore them during execution.
+
 ```php
-public $draft = true;
+public $draft = true | false;
 ```
 
 ```shell
 composer prestaflow:default -- --draft
-```
-
-```php
-public $draft = false;
-```
-
-```shell
 composer prestaflow:default -- --no-draft
 ```
 
@@ -102,11 +99,15 @@ composer prestaflow:default -- --no-draft
 </div>
 <!-- / Since -->
 
-```php
-public $groups = 'tutorial';
-```
+
+Within a set of tests, it is sometimes possible to group some of them to refer to the test typology.
+
+You can define one or more groups (using an array).
+
+By default, a test that does not belong to any group will be included in the "All" group.
 
 ```php
+public $groups = 'tutorial';
 public $groups = ['scenarions', 'en'];
 ```
 

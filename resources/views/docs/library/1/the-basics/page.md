@@ -5,7 +5,7 @@ order: 400
 
 ## Native pages
 
-PrestaFlow includes a series of so-called native pages.
+<span class="bg-clip-text bg-gradient-to-tl from-blue-400 to-teal-600 font-semibold text-transparent">PrestaFlow</span> includes a series of so-called native pages.
 
 These are the pages found in your PrestaShop store, such as product pages, categories, CMS, contact, etc.
 

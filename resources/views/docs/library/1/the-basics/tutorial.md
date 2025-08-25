@@ -3,15 +3,15 @@ title: Tutorial
 order: 100
 ---
 
-Here we are!
+Here we are! 🚀
 
 Your project is configured and ready for its first tests.
 
 ## Namespaces
 
 We'll add two namespaces to our composer.json file:
-- Shop: custom test scenarios and elements
-- Tests: test suites
+- **Shop**: custom test scenarios and elements
+- **Tests**: test suites
 
 ```json
     "autoload": {
@@ -28,7 +28,7 @@ We'll add two namespaces to our composer.json file:
 
 ## Create a suite
 
-Inside the Tests folder, create a file nammed as you want. For exemple : First.php
+Inside the **Tests** folder, create a file nammed as you want. For exemple : *First.php*
 
 ```php
 namespace Tests;
@@ -46,7 +46,7 @@ class First extends TestsSuite
 }
 ```
 
-If you run the prestaflow:tests script, you will see your first suite in action !
+If you run the `prestaflow:default` script, you will see your first suite in action !
 
 ## Add steps
 
@@ -72,7 +72,7 @@ class First extends TestsSuite
 
 ## Create a scenario
 
-In the src/Tests/Scenarios folder, add a file named DoNothing.php.
+In the **src/Tests/Scenarios** folder, add a file named *DoNothing.php*.
 
 In it, add your first scenario as follows:
 

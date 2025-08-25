@@ -5,7 +5,7 @@ order: 600
 
 The library supports a PrestaShop store based on the language used.
 
-Since English is used by default in PrestaShop, this language is automatically supported by PrestaFlow.
+Since English is used by default in PrestaShop, this language is automatically supported by <span class="bg-clip-text bg-gradient-to-tl from-blue-400 to-teal-600 font-semibold text-transparent">PrestaFlow</span>.
 
 French is also supported by the library's editorial team.
 
@@ -36,7 +36,7 @@ You can add these in a JSON format file present in the Tests/Translations folder
 </div>
 <!-- / Since -->
 
-You can add these in a JSON format file present in the Tests/Messages folder and its name must be as follows: <locale>.json
+You can add these in a JSON format file present in the **Tests/Messages** folder and its name must be as follows: &lt;locale&gt;.json (e.g.: *fr.json*)
 
 ```json
 {

@@ -16,7 +16,7 @@ order: 700
 </div>
 <!-- / Since -->
 
-You can add these in a JSON format file present in the Tests/Selectors folder and its name must be as follows: <locale>.json
+You can add these in a JSON format file present in the **Tests/Selectors** folder and its name must be as follows: &lt;locale&gt;.json (e.g.: *fr.json*)
 
 ```json
 {
@@ -28,4 +28,4 @@ You can add these in a JSON format file present in the Tests/Selectors folder an
 }
 ```
 
-The structured datas will follow the namespace as this : FrontOffice\Product\Page.
+The structured datas will follow the namespace as this : *FrontOffice\Product\Page*.

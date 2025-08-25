@@ -5,7 +5,7 @@ order: 001
 
 ## Let's Build Together 🚀
 
-PrestaFlow is an open-source set of prebuilt tests components, ready-to-use examples made for the PrestaShop E-commerce software.
+<span class="bg-clip-text bg-gradient-to-tl from-blue-400 to-teal-600 font-semibold text-transparent">PrestaFlow</span> is an open-source set of prebuilt tests components, ready-to-use examples made for the PrestaShop E-commerce software.
 
 As now, it's the first library of its kind that lets you write and manage automated tests on your PrestaShop in PHP.
 
@@ -24,9 +24,9 @@ The PHP library is open source.
 
 ## Presentation
 
-After contributing to PrestaShop SA's modules-testing-library project—now archived—at the end of December 2021, the first steps of PrestaFlow were completed two years later.
+After contributing to PrestaShop SA's modules-testing-library project—now archived—at the end of December 2021, the first steps of <span class="bg-clip-text bg-gradient-to-tl from-blue-400 to-teal-600 font-semibold text-transparent">PrestaFlow</span> were completed two years later.
 
-On January 17, 2024, PrestaFlow became a reality.
+On January 17, 2024, <span class="bg-clip-text bg-gradient-to-tl from-blue-400 to-teal-600 font-semibold text-transparent">PrestaFlow</span> became a reality.
 
 Since then, the focus has been on the development of the PHP library.
 
@@ -67,7 +67,7 @@ These people supported the project during its initial development. A big thank y
 #### About the sponsor
 
 If you use and enjoy the project, you can also [show your support by sponsoring it](https://github.com/sponsors/PrestaFlow).
-This will help us to continue maintaining and supporting PrestaFlow's PHP Library.
+This will help us to continue maintaining and supporting <span class="bg-clip-text bg-gradient-to-tl from-blue-400 to-teal-600 font-semibold text-transparent">PrestaFlow</span>'s PHP Library.
 
 </aside>
 
