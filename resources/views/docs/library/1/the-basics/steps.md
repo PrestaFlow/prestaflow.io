@@ -29,7 +29,6 @@ A todo step is a step to complete.
 A skip step is a step to skip.
 
 
-
 ```php
 ->skip('will be skipped', function () {
 })
