@@ -60,7 +60,7 @@ jobs:
         file_name: .env
 
     - name: Run test suite
-      run: composer run prestaflow:tests
+      run: composer prestaflow:default
 ```
 
 <aside class="relative z-0 mt-5 overflow-hidden rounded-2xl bg-blue-50 px-5 ring-1 ring-black/5 dark:bg-blue-600/10">

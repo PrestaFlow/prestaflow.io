@@ -26,30 +26,38 @@ Into your composer.json, add theses scripts :
 
 ``` json
 "scripts": {
-    "prestaflow:base": "./vendor/prestaflow/php-library/bin/prestaflow run",
-    "prestaflow:tests": "@prestaflow:base ./Tests @additional_args",
-    "prestaflow:tests:json": "./vendor/prestaflow/php-library/bin/prestaflow run --output=JSON ./Tests"
+    "prestaflow:default": "./vendor/prestaflow/php-library/bin/prestaflow run",
+    "prestaflow:json": "@prestaflow:default --output=JSON"
 },
 ```
 
-You are free to modify the "tests" script to populate another folder if necessary.
+You are free to modify the "tests" script to use another folder if necessary.
 
 ## Run
 
 ```shell
-composer run prestaflow:tests
+composer prestaflow:default
+composer prestaflow:default -- --output="compact"
 ```
 
 As now, if you doesn't have a Tests folder, you will have an error ouput.
 
-If you have a Tests folder but withtout PrestaFlow's suites, it will show a success message.
+If you have a Tests folder but without PrestaFlow's suites, it will show a success message.
+
+You can also specify a different folder if needed.
+
+```shell
+composer prestaflow:default ./FolderName
+```
 
 ### JSON output
 
 Also, you can get the JSON output if wanted.
 
 ```shell
-composer run prestaflow:tests:json
+composer prestaflow:json
+composer prestaflow:default -- -o "json"
+composer prestaflow:default -- --output="json"
 ```
 
 ### Working with drafts
@@ -70,7 +78,7 @@ public $draft = true;
 ```
 
 ```shell
-composer run prestaflow:tests:json -- --draft
+composer prestaflow:default -- --draft
 ```
 
 ```php
@@ -78,7 +86,7 @@ public $draft = false;
 ```
 
 ```shell
-composer run prestaflow:tests:json -- --no-draft
+composer prestaflow:default -- --no-draft
 ```
 
 ### Working with groups
@@ -103,5 +111,5 @@ public $groups = ['scenarions', 'en'];
 ```
 
 ```shell
-composer run prestaflow:base -- --group=tutorial --group=other-group
+composer prestaflow:default -- --group=tutorial --group=other-group
 ```
