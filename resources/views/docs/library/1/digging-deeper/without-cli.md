@@ -15,14 +15,14 @@ However, you can run automated tests outside of the console.
 ```php
 require_once './vendor/autoload.php';
 
-use Tests\Scenarios;
+use Tests\Products as ProductsTests;
 
-$productsTests = new Scenarios();
+$productsTests = new ProductsTests();
 $productsTests->run();
 
 $results = json_decode($productsTests->results(), true);
 
 echo '<pre>';
-var_dump($results['stats']);
+var_dump($results['stats'], JSON_PRETTY_PRINT);
 echo '</pre>';
 ```
