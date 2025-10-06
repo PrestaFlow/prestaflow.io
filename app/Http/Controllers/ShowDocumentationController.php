@@ -46,7 +46,8 @@ class ShowDocumentationController extends Controller
         } catch (InvalidArgumentException $e) {
             return $this->redirectToFirstNavigationPage($navigation, $page);
         }
-        SEOTools::setTitle($pageProperties['title'].' - PrestaFlow '.$platform.' v'.$version);
+        //SEOTools::setTitle($pageProperties['title'].' - PrestaFlow '.$platform.' v'.$version);
+        SEOTools::setTitle($pageProperties['title'].' - PrestaFlow '.$platform);
         SEOTools::setDescription(Arr::exists($pageProperties, 'description') ? $pageProperties['description'] : '');
 
         return view('docs.index')->with($pageProperties);
