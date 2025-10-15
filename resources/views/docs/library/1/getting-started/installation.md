@@ -31,6 +31,27 @@ Into your composer.json, add theses scripts :
 },
 ```
 
+<!-- Since -->
+<div class="flex items-center gap-4">
+  <div class="relative inline-flex">
+    <button class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+      Since 1.2.2
+    </button>
+    <span class="absolute top-0.5 left-0.5 grid min-h-[12px] min-w-[12px] -translate-x-2/4 -translate-y-2/4 place-items-center rounded-full bg-purple-600 py-1 px-1 text-xs font-medium leading-none text-white content-['']"></span>
+  </div>
+</div>
+<!-- / Since -->
+
+While using JSON output, you can save the results into a file.
+
+``` json
+"scripts": {
+    "prestaflow:default": "./vendor/prestaflow/php-library/bin/prestaflow run",
+    "prestaflow:json": "@prestaflow:default --output=JSON",
+    "prestaflow:json:file": "@prestaflow:json -f prestaflow.json"
+},
+```
+
 ## Run
 
 ```shell
@@ -56,6 +77,21 @@ Also, you can get the JSON output if wanted.
 composer prestaflow:json
 composer prestaflow:default -- -o "json"
 composer prestaflow:default -- --output="json"
+```
+
+<!-- Since -->
+<div class="flex items-center gap-4">
+  <div class="relative inline-flex">
+    <button class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+      Since 1.2.2
+    </button>
+    <span class="absolute top-0.5 left-0.5 grid min-h-[12px] min-w-[12px] -translate-x-2/4 -translate-y-2/4 place-items-center rounded-full bg-purple-600 py-1 px-1 text-xs font-medium leading-none text-white content-['']"></span>
+  </div>
+</div>
+<!-- / Since -->
+
+```shell
+composer prestaflow:json:file
 ```
 
 ### Working with drafts
