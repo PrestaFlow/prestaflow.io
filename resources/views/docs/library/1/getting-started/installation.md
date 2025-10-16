@@ -42,13 +42,13 @@ Into your composer.json, add theses scripts :
 </div>
 <!-- / Since -->
 
-While using JSON output, you can save the results into a file.
+While using JSON output, you can save the results into a file (*prestaflow/results.json*).
 
 ``` json
 "scripts": {
     "prestaflow:default": "./vendor/prestaflow/php-library/bin/prestaflow run",
     "prestaflow:json": "@prestaflow:default --output=JSON",
-    "prestaflow:json:file": "@prestaflow:json -f prestaflow/results.json"
+    "prestaflow:json:file": "@prestaflow:json --file"
 },
 ```
 
