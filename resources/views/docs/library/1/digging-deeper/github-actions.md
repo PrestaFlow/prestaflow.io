@@ -40,14 +40,15 @@ jobs:
     - run: |
           git config --global --add safe.directory /app
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
-
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.2'
         extensions: gd
+        tools: composer:v2
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
