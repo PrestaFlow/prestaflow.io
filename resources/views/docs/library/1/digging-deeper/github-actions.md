@@ -7,7 +7,7 @@ order: 100
 
 You can use the library inside a GitHub workflow.
 
-An [example](https://github.com/PrestaEdit/prestaflow-prestashop) is done here.
+An [example](https://github.com/PrestaFlow/prestaflow-prestashop) is done here.
 
 ## Workflow
 
