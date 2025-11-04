@@ -25,3 +25,9 @@ Also, you will need to copy your <strong>img</strong> folder into the <strong>te
 <span class="bg-clip-text bg-gradient-to-tl from-blue-400 to-teal-600 font-semibold text-transparent">PrestaFlow</span> allow you to set a generic **User-Agent** globally, for each suite and even each performed test !
 
 </aside>
+
+## Handle the .htpasswd on my preprod
+
+As now, there is no method to fill the form where the user and password are asked once a .htpasswd file is present on your instance.
+
+To avoid any issue with that, you can still use them inside the URL - as it's in the .env file - like this : https://preprod:passwd@preprod.url
