@@ -144,7 +144,7 @@ By default, a test that does not belong to any group will be included in the "Al
 
 ```php
 public $groups = 'tutorial';
-public $groups = ['scenarions', 'en'];
+public $groups = ['scenarios', 'en'];
 ```
 
 ```shell
