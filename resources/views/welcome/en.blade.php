@@ -190,7 +190,7 @@
 
                 <div class="mt-5 flex flex-col sm:flex-row justify-center items-center gap-1.5 sm:gap-3">
                     <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500"
-                        href="https://prestaflow.io/docs/library/1/getting-started/installation">
+                        href="{{ route('docs') }}/library/1/getting-started/installation">
                         Installation Guide
                         <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
