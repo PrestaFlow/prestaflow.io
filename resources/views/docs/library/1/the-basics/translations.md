@@ -15,7 +15,7 @@ It's sometimes necessary to add your own translations, as the same text may be t
 
 Furthermore, your store itself includes its own translations for your specific developments.
 
-You can add these in a JSON format file present in the Tests/Translations folder and its name must be as follows: <locale>.json
+You can add these in a JSON format file present in the Tests/Translations folder and its name must be as follows: &lt;locale&gt;.json
 
 ```json
 {
