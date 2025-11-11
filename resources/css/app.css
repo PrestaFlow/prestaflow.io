@@ -137,7 +137,7 @@ nav.docs-navigation > ul > li.active > a {
     @apply text-black dark:text-white;
 
     & > svg {
-        @apply text-violet-400;
+        @apply text-blue-400;
     }
 }
 
@@ -159,11 +159,11 @@ nav.docs-navigation > ul > li > ul {
         }
 
         &.exact-active a {
-            @apply border-violet-400 font-medium text-violet-800/80 dark:border-violet-400/90 dark:text-white;
+            @apply border-blue-400 font-medium text-blue-800/80 dark:border-blue-400/90 dark:text-white;
         }
 
         &:hover a {
-            @apply border-violet-400 dark:border-violet-400/90;
+            @apply border-blue-400 dark:border-blue-400/90;
         }
     }
 }
@@ -190,11 +190,16 @@ nav.docs-navigation > ul > li > ul {
 }
 
 .prose pre code {
-    @apply text-gray-50;
+    @apply bg-transparent p-0 text-sm font-normal text-gray-50;
 }
 
 .prose code {
-    @apply px-1;
+    @apply rounded bg-gray-200 px-1.5 py-0.5 text-sm font-medium text-blue-600;
+}
+
+.prose code::before,
+.prose code::after {
+    content: none;
 }
 
 .prose a {
@@ -259,5 +264,5 @@ nav.docs-navigation > ul > li > ul {
 }
 
 .dark .prose code {
-    @apply text-gray-300;
+    @apply bg-gray-800 text-blue-300;
 }
